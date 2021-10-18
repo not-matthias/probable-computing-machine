@@ -1,3 +1,10 @@
 /target
 rust_objs/
 src/rust.o
+**/*.cmd
+*.order
+*.mod
+*.ko
+*.o
+*.mod.c
+*.symvers
