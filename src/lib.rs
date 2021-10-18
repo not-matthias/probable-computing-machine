@@ -3,10 +3,6 @@
 
 use core::panic::PanicInfo;
 
-extern "C" {
-    fn init_ffi();
-}
-
 #[lang = "eh_personality"]
 #[no_mangle]
 pub extern "C" fn eh_personality() {}
@@ -18,8 +14,7 @@ fn panic_handler(_info: &PanicInfo) -> ! {
 
 #[no_mangle]
 pub extern "C" fn init_module() -> i32 {
-    let _ = unsafe { init_ffi() };
-    1
+    2
 }
 
 #[no_mangle]

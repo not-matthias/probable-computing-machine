@@ -14,6 +14,7 @@ clippy:
 clean:
 	cargo clean
 	rm -rf rust_objs
+	rm -rf target
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
 src/rust.o: Cargo.toml src/ffi.c src/lib.rs
